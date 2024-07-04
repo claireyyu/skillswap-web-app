@@ -1,0 +1,178 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 65px;
+  align-items: center;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  background-color:hsl(232, 85%, 65%);
+  z-index: 1000;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar h1 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  color: white;
+}
+
+.navbar:hover {
+  cursor: pointer;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  list-style-type: none;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.navbar ul li {
+  padding: 0px 20px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover {
+  transform: translateY(2px);
+}
+
+.navbar ul li.learn-teach a {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  color: white;
+}
+
+.navbar ul li.learn-teach a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li.learn-teach a:hover::after {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-list li {
+  margin: 0 1rem;
+}
+
+a.learn-teach {
+  color: #2b2b2b(232, 85%, 60%);
+  border: none;
+  cursor: pointer;
+}
+
+.profile-icon {
+  position: relative;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.profile-menu a, .profile-menu button {
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  li.learn-teach {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar ul li.learn-teach a {
+    color: black;
+  }
+}

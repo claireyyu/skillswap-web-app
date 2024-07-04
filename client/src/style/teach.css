@@ -1,0 +1,118 @@
+.teach-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-text h1 {
+  font-size: 2.5em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.form-text p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.addSkill {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.addSkill input,
+.addSkill textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+
+.addSkill textarea {
+  resize: none;
+  height: 150px;
+}
+
+.addSkill button {
+  padding: 15px;
+  background-color: #6C63FF;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addSkill button:hover {
+  background-color: #918BF9;
+}
+
+@media (max-width: 768px) {
+  .teach-form {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .form-text {
+    text-align: center;
+  }
+
+  .form-text h1, p {
+    margin-bottom: 20px;
+    margin-top: 20px;   
+
+  }
+
+  img.teach-pic {
+    max-width: 90%;
+  }
+
+  .addSkill {
+    width: 100%;
+  }
+
+  .addSkill input,
+  .addSkill textarea,
+  .addSkill button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .teach-form {
+    padding: 10px;
+  }
+
+  .form-text h1 {
+    font-size: 1.8em;
+  }
+
+  .form-text p {
+    font-size: 1em;
+  }
+
+  .addSkill input,
+  .addSkill textarea,
+  .addSkill button {
+    padding: 10px;
+  }
+}

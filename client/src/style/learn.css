@@ -1,0 +1,151 @@
+.learn {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 90%;
+  max-width: 1000px;
+  margin: 10vh auto;
+}
+
+.learn-header,
+.learn-intro {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+
+.skills-list-learn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  gap: 2rem;
+}
+
+.learn-skills {
+  border-radius: 16px;
+  box-shadow: 30px 30px 30px -25px rgba(65, 51, 183, 0.25);
+  width: 450px;
+  height: 300px;
+  padding: 1rem;
+  margin: 30px auto;
+  background-color: rgb(234,238,246);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .learn-skills {
+      width: 80%; 
+      margin: 20px auto;
+      font-size: 1.25rem;
+  }
+}
+
+.description {
+  color: rgb(160,160,160);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.tutor {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.learn-skills button {
+  padding: 15px;
+  background-color: #6C63FF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-skills button:hover {
+  background-color: #918BF9;
+}
+
+.loading,
+.error {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .skills-list-learn {
+    grid-template-columns: 1fr;
+  }
+
+  .learn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learn-header,
+  .learn-intro {
+    text-align: center;
+  }
+
+  .learn-skills {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .learn-header,
+  .learn-intro {
+    font-size: 1.5em;
+  }
+
+  .skills-list {
+    gap: 1rem;
+  }
+
+  .learn-skills {
+    width: 85%;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .learn-header,
+  .learn-intro {
+    font-size: 1.2em;
+  }
+
+  .learn-skills p {
+    font-size: 1em;
+  }
+
+  .learn-skills p {
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 380px) {
+    .learn-skills {
+      width: 75%;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .learn-skills {
+      width: 65%;
+    }
+  }
+}

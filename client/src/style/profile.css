@@ -1,0 +1,218 @@
+
+.profile {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+p.profile-email {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.location-section p {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 8px;
+  border: none;
+  background-color: #6C63FF;
+  color: white;
+  border-radius: 10px;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.location-section p:hover {
+  transform: translateY(-5px); 
+}
+
+.profile-details {
+  margin-top: 1rem;
+}
+
+.profile-details h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.profile-details ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.profile-details li {
+  background: rgb(234,238,246);
+  padding: 1rem;
+  border-radius: 25px;
+  box-shadow: 30px 30px 30px -25px rgba(65, 51, 183, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.profile-details li:hover {
+  transform: translateY(-5px);
+}
+
+.profile-menu button, .profile-menu a {
+  text-align: center;
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.profile-menu button:hover, .profile-menu a:hover{
+  background-color: #6C63FF;
+  color: white;
+}
+
+.loading,
+.error {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+p.skill-display-title {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.profile-input {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.profile-textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.profile-actions, .skills-section, .meetings-section {
+  margin-top: 20px;
+}
+
+.meetings-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.meeting-title {
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.meeting-date {
+  text-align: center;
+  margin: 5px 0;
+  font-style: italic;
+  color: hsl(0, 0%, 50%);
+  font-size: 0.75rem;
+}
+
+.meeting-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.edit-button, .save-button, .cancel-button, .delete-button {
+  padding: 5px 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #6C63FF;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #918bf9;
+}
+
+.save-button {
+  background-color: #7ec98f;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #8ed9a1;
+}
+
+.cancel-button, .delete-button {
+  background-color: #e3616e;
+  color: white;
+}
+
+.cancel-button:hover, .delete-button:hover {
+  background-color: #f06d7a;
+}
+
+.edit-profile-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    margin: 30px 10px; 
+    width: auto; 
+  }
+
+  .profile-details ul {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    margin: 30px 10px; 
+    width: auto; 
+  }
+
+  .profile-details ul {
+    grid-template-columns: 1fr; 
+  }
+}
